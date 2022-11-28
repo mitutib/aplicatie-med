@@ -12,6 +12,9 @@ import java.util.List;
 
 public class Patient {
 
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "patients")
+    List<Conditions> conditions;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -23,13 +26,6 @@ public class Patient {
     private String email;
     @Column(name = "patient_phone")
     private String phone;
-
-
-    @JsonIgnore
-    @ManyToMany(fetch=FetchType.LAZY, mappedBy ="patients"
-    )
-    List<Conditions> conditions;
-
 
 
 }

@@ -1,11 +1,8 @@
 package com.demospringboot.aplicatiemed.controller;
 
 import com.demospringboot.aplicatiemed.model.Conditions;
-import com.demospringboot.aplicatiemed.model.Patient;
-import com.demospringboot.aplicatiemed.model.Treatments;
 import com.demospringboot.aplicatiemed.service.ConditionsService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

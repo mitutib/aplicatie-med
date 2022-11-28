@@ -7,10 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TreatmentsRepository extends JpaRepository<Treatments,Integer>{
+public interface TreatmentsRepository extends JpaRepository<Treatments, Integer> {
 
 
     List<Treatments> findAllTreatmentsByName(String name);
+
     List<Treatments> findAllTreatmentsByNameAndDescription(String name, String description);
 
 

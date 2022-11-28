@@ -9,12 +9,10 @@ import java.util.Optional;
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
     List<Patient> findAllPatientsByName(String name);
+
     List<Patient> findAllPatientsByPhone(String phone);
 
     Optional<Patient> findAllPatientsByEmail(String email);
-
-
-
 
 
 }

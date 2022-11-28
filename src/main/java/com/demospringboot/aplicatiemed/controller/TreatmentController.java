@@ -16,21 +16,23 @@ public class TreatmentController {
     private Treatments treatment;
 
     @GetMapping("/allTreatments")
-    public List<Treatments> getAllTreatments(){
+    public List<Treatments> getAllTreatments() {
         return treatmentsService.readAllTreatments();
 
     }
+
     @PostMapping("/addNewTreatment")
-    public Treatments createTreatment(@RequestBody Treatments treatment){
+    public Treatments createTreatment(@RequestBody Treatments treatment) {
         return treatmentsService.addTreatment(treatment);
     }
+
     @PutMapping
-    public Treatments editTreatment(@RequestBody  Treatments treatment){
+    public Treatments editTreatment(@RequestBody Treatments treatment) {
         return treatmentsService.editTreatment(treatment);
     }
 
-    @PutMapping(path ="{id}")
-    public void updateTreatment(@PathVariable int id, @RequestBody Treatments treatment){
+    @PutMapping(path = "{id}")
+    public void updateTreatment(@PathVariable int id, @RequestBody Treatments treatment) {
         treatmentsService.updateTreatment(id, treatment);
 
 
@@ -42,7 +44,6 @@ public class TreatmentController {
 
 
     }
-
 
 
 }

@@ -8,15 +8,16 @@ import java.util.Optional;
 public interface IPatientService {
 
     List<Patient> readAllPatients();
+
     void createPatient(Patient patient);
+
     void updatePatient(int id, Patient patient);
+
     void deletePatient(int id);
 
-    public Optional<Patient> getPatientById(int id);
+    Optional<Patient> getPatientById(int id);
+
     List<Patient> getPatientByName(String name);
-
-
-
 
 
 }

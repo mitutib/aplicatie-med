@@ -8,14 +8,15 @@ public interface IConditionsService {
 
     List<Conditions> readAllConditions();
 
-    public Conditions addCondition(Conditions condition);
+    Conditions addCondition(Conditions condition);
 
-    public Conditions editConditions(Conditions condition);
+    Conditions editConditions(Conditions condition);
 
-    public void updateCondition(int id, Conditions condition);
+    void updateCondition(int id, Conditions condition);
 
-    public void deleteConditionById(int id);
-    public void deleteCondition(int id);
+    void deleteConditionById(int id);
+
+    void deleteCondition(int id);
 
 
 }

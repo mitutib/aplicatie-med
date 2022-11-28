@@ -3,22 +3,21 @@ package com.demospringboot.aplicatiemed.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
 
 //@Getter
 //@Setter
 //@AllArgsConstructor
 @Data
 @Entity
-@Table(name="treatments")
+@Table(name = "treatments")
 public class Treatments {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column(name="surgical_treatment")
+    @Column(name = "surgical_treatment")
     private String name;
 
-    @Column(name="functional_treatment")
+    @Column(name = "functional_treatment")
     private String description;
 
 //    @ManyToOne
@@ -28,10 +27,6 @@ public class Treatments {
 //    @ManyToMany(fetch = FetchType.LAZY,
 //            mappedBy = "conditions")
 //    List<Conditions> conditions;
-
-
-
-
 
 
 }

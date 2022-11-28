@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-
 @Service
 public class TreatmentsService implements ITreatmentsService {
 
@@ -19,7 +18,7 @@ public class TreatmentsService implements ITreatmentsService {
     TreatmentsRepository treatmentsRepository;
 
     //READ all products from DB
-   public List<Treatments> readAllTreatments() {
+    public List<Treatments> readAllTreatments() {
         return treatmentsRepository.findAll();
 
     }
@@ -57,25 +56,24 @@ public class TreatmentsService implements ITreatmentsService {
         return treatmentsRepository.save(treatment);
     }
 
-    public void updateTreatment(int id, Treatments treatment){
-       Treatments treatmentToUpdate=treatmentsRepository.findById(id).orElseThrow(()->
-               new IllegalStateException(String.format("Treatment with id %s doesn t exist", id)));
-             treatmentToUpdate.setName(treatment.getName());
-              treatmentToUpdate.setDescription(treatment.getDescription());
-              treatmentsRepository.save(treatmentToUpdate);
+    public void updateTreatment(int id, Treatments treatment) {
+        Treatments treatmentToUpdate = treatmentsRepository.findById(id).orElseThrow(() -> new IllegalStateException(String.format("Treatment with id %s doesn t exist", id)));
+        treatmentToUpdate.setName(treatment.getName());
+        treatmentToUpdate.setDescription(treatment.getDescription());
+        treatmentsRepository.save(treatmentToUpdate);
 
 
     }
 
     public void deleteTreatment(int id) {
         boolean treatmentExists = treatmentsRepository.existsById(id);
-        if (!treatmentExists) {throw new IllegalStateException(String.format("Treatment with id %s doesn t exist", id));
+        if (!treatmentExists) {
+            throw new IllegalStateException(String.format("Treatment with id %s doesn t exist", id));
 
         }
 
         treatmentsRepository.deleteById(id);
     }
-
 
 
 }
