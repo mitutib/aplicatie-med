@@ -15,6 +15,7 @@ public class Patient {
     @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "patients")
     List<Conditions> conditions;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

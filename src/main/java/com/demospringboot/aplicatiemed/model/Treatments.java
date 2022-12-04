@@ -4,9 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-//@Getter
-//@Setter
-//@AllArgsConstructor
+
 @Data
 @Entity
 @Table(name = "treatments")
@@ -14,6 +12,7 @@ public class Treatments {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     @Column(name = "surgical_treatment")
     private String name;
 

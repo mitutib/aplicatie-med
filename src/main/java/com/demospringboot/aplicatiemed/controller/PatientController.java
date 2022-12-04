@@ -22,7 +22,6 @@ public class PatientController {
 
     }
 
-
     @GetMapping(path = "{id}")
     public ResponseEntity<Patient> getPatientById(@PathVariable int id) {
         Patient patientDB = patientService.getPatientById(id).orElseThrow(()
@@ -43,7 +42,6 @@ public class PatientController {
         return new ResponseEntity<>(patientList, HttpStatus.OK);
 
     }
-
 
     @PostMapping
     public Patient createPatients(@RequestBody Patient patient) {

@@ -28,10 +28,6 @@ public class TreatmentsService implements ITreatmentsService {
         return Optional.empty();
     }
 
-    @Override
-    public Treatments addTreatments(Treatments treatments) {
-        return null;
-    }
 
     public List<Treatments> findAllTreatmentsByName(String name) {
         return treatmentsRepository.findAllTreatmentsByName(name);

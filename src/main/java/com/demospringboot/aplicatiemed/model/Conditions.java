@@ -2,6 +2,7 @@ package com.demospringboot.aplicatiemed.model;
 
 
 import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -22,9 +23,6 @@ public class Conditions {
     private int id;
     @Column(name = "condition_name")
     private String name;
-//    @ManyToOne
-//    @JoinColumn(name="patient_id", nullable=false)
-//    Patient patient;
     @Column(name = "condition_description")
     private String description;
 

@@ -12,8 +12,8 @@ import java.util.List;
 @RequestMapping("/api/treatments")
 public class TreatmentController {
 
-    private final TreatmentsService treatmentsService;
-    private Treatments treatment;
+    public final TreatmentsService treatmentsService;
+//    private Treatments treatment;
 
     @GetMapping("/allTreatments")
     public List<Treatments> getAllTreatments() {

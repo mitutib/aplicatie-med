@@ -10,7 +10,6 @@ public interface ITreatmentsService {
 
     Optional<Treatments> getTreatmentsById();
 
-    Treatments addTreatments(Treatments treatments);
 
     Treatments addTreatment(Treatments treatment);
 
