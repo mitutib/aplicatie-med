@@ -24,8 +24,7 @@ public class PatientController {
 
     @GetMapping(path = "{id}")
     public ResponseEntity<Patient> getPatientById(@PathVariable int id) {
-        Patient patientDB = patientService.getPatientById(id).orElseThrow(()
-                -> new IllegalStateException(String.format("Patient with id %s doesn t exist", id)));
+        Patient patientDB = patientService.getPatientById(id).orElseThrow(() -> new IllegalStateException(String.format("Patient with id %s doesn t exist", id)));
 
         return new ResponseEntity<>(patientDB, HttpStatus.OK);
 
