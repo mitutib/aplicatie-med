@@ -88,5 +88,4 @@ public class PatientService implements IPatientService {
 
         patientRepository.deleteById(id);
     }
-
 }
